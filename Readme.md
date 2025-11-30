@@ -121,6 +121,7 @@ When yawning is detected repeatedly, the system will automatically:
 ### 🔹 YOLO Detection Output (Yawn Detected)
 <p align="center">
   <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_output.png" width="850">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_model_result" width="850">
 </p>
 
 ---
