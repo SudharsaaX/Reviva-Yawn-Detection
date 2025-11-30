@@ -128,14 +128,14 @@ When yawning is detected repeatedly, the system will automatically:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/SudharsaaX">
+      <a href="https://github.com/Sriram494">
         <img src="https://avatars.githubusercontent.com/SudharsaaX" width="95px" style="border-radius:50%"/>
         <br/>
         <sub><b>Sudharsan S</b></sub>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sriram494">
+      <a href="https://github.com/SudharsaaX">
         <img src="https://avatars.githubusercontent.com/Sriram494" width="95px" style="border-radius:50%"/>
         <br/>
         <sub><b>Sriram K</b></sub>
