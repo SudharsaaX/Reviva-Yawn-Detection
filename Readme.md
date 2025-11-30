@@ -41,8 +41,18 @@ Camera → Raspberry Pi → YOLOv8 Inference → Driver Yawn Detected?
 → No → Continue monitoring  
 → Yes → Trigger buzzer alert + Telegram notification
 
-![Architecture](https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_architecture.png)
+### 🔹 System Workflow (Architecture)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_architecture.png" width="850">
+</p>
+---
 
+### 🔹 Dataset Processing Pipeline
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_data_process.png" width="850">
+</p>
+
+---
 
 ---
 
@@ -58,7 +68,12 @@ Camera → Raspberry Pi → YOLOv8 Inference → Driver Yawn Detected?
 | Precision | 0.88 |
 | Recall | 0.87 |
 
-![Confusion Matrix](https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_confusion_matrix.jpg)
+
+### 🔹 Model Performance (Confusion Matrix)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_confusion_matrix.jpg" width="650">
+</p>
+
 ---
 
 ## Tech Stack
@@ -100,16 +115,35 @@ python yawn_eye_alert_iot_first_test.py
 
 ## IoT Alert System (Telegram)
 Steps to enable Telegram notifications:
-  Open Telegram → Search BotFather
-  Create a bot → Copy the generated BOT_TOKEN
-  Create a Telegram group → Add your bot to the group
-  Get CHAT_ID (use @RawDataBot or any Telegram chat ID extractor)
-  Insert both values inside the Python script:
+- Open Telegram → Search BotFather
+- Create a bot → Copy the generated BOT_TOKEN
+- Create a Telegram group → Add your bot to the group
+- Get CHAT_ID (use @RawDataBot or any Telegram chat ID extractor)
+- Insert both values inside the Python script:
+  
   ```bash
 BOT_TOKEN = "your_token_here"
 CHAT_ID = "your_chat_id_here"
  ```
+
 When yawning is detected repeatedly, the system will automatically:
-Trigger a buzzer
-Send a real-time alert message to the Telegram group
-Upload the detected image (driver yawning) to Telegram
+- Trigger a buzzer
+- Send a real-time alert message to the Telegram group
+- Upload the detected image (driver yawning) to Telegram
+```
+---
+
+### 🔹 YOLO Detection Output (Yawn Detected)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_output.png" width="850">
+</p>
+
+### 🔹 Telegram Notification Alert
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_tele_notification.jpg" width="850">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_tele_screenshot%20.jpg" width="850">
+</p>
+---
