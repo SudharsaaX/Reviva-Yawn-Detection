@@ -1,0 +1,7 @@
+path: C:\Users\Sudharsaa\Documents\221501149\yawn-detection-yolo\Yawn_detection.v2i.yolov8
+train: C:\Users\Sudharsaa\Documents\221501149\yawn-detection-yolo\Yawn_detection.v2i.yolov8\train\images
+val: C:\Users\Sudharsaa\Documents\221501149\yawn-detection-yolo\Yawn_detection.v2i.yolov8\valid\images
+test: C:\Users\Sudharsaa\Documents\221501149\yawn-detection-yolo\Yawn_detection.v2i.yolov8\test\images
+names:
+- no_yawn
+- yawn

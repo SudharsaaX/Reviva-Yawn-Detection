@@ -1,0 +1,101 @@
+import cv2
+import time
+import os
+from datetime import datetime
+from ultralytics import YOLO
+from telegram import Bot
+
+# ====== CONFIG ======
+STREAM_URL = "https://10.110.211.109:8080/video"
+MODEL_PATH = "best.pt"
+SAVE_FOLDER = "yawn_captures"
+CONF_THRESH = 0.55
+YAWN_CLASS_NAME = "yawn_0103"          # ✅ your real class name
+THRESH_FRAMES = 3
+IMGSIZE = 320
+# ===== TELEGRAM =====
+TELEGRAM_BOT_TOKEN = "7331584156:AAHY_VzAyYk29idfkYhiafJUdpbrP6TQWZ4"
+TELEGRAM_CHAT_ID = "4812700284"
+
+# =====================
+
+os.makedirs(SAVE_FOLDER, exist_ok=True)
+
+bot = Bot(token=TELEGRAM_BOT_TOKEN)
+
+def send_telegram_alert(filepath):
+    try:
+        bot.send_message(chat_id=TELEGRAM_CHAT_ID,
+                         text="⚠️ Yawn Detected!\nImage incoming…")
+        bot.send_photo(chat_id=TELEGRAM_CHAT_ID,
+                       photo=open(filepath, "rb"))
+        print("[INFO] Telegram alert sent")
+    except Exception as e:
+        print("[ERROR] Telegram:", e)
+
+model = YOLO(MODEL_PATH)
+
+cap = cv2.VideoCapture(STREAM_URL)
+cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
+yawn_count = 0
+consecutive = 0
+
+print("[INFO] Running yawn detector with Telegram alerts...")
+
+try:
+    while True:
+        for _ in range(3):
+            cap.read()
+
+        ret, frame = cap.read()
+        if not ret:
+            print("[WARN] No frame")
+            continue
+
+        results = model.predict(frame, imgsz=IMGSIZE, conf=CONF_THRESH, verbose=False)
+        detected = False
+        annotated = frame.copy()
+
+        if results and len(results[0].boxes) > 0:
+            for box in results[0].boxes:
+                cls_id = int(box.cls[0])
+                cls_name = model.names[cls_id]
+                conf = float(box.conf[0])
+
+                if cls_name == YAWN_CLASS_NAME and conf >= CONF_THRESH:
+                    detected = True
+
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    cv2.rectangle(annotated, (x1, y1), (x2, y2), (0,255,255), 2)
+                    cv2.putText(annotated, f"{cls_name} {conf:.2f}",
+                                (x1, y1-5),
+                                cv2.FONT_HERSHEY_SIMPLEX,
+                                0.6, (0,255,255), 2)
+
+        # ========= consecutive frames logic =========
+        if detected:
+            consecutive += 1
+            if consecutive >= THRESH_FRAMES:
+                yawn_count += 1
+
+                timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+                filename = os.path.join(SAVE_FOLDER, f"yawn_{timestamp}.jpg")
+
+                cv2.imwrite(filename, annotated)
+
+                print(f"[SAVED] {filename}")
+
+                # ✅ Send Telegram alert
+                send_telegram_alert(filename)
+
+                consecutive = 0
+        else:
+            consecutive = 0
+
+except KeyboardInterrupt:
+    print("[INFO] Stopped")
+
+finally:
+    cap.release()
+    print("[INFO] Closed")
