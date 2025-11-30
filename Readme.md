@@ -73,6 +73,7 @@ Camera → Raspberry Pi → YOLOv8 Inference → Driver Yawn Detected?
 
 ---
 
+
 ## Installation and Usage
 
 ### Clone the repository
@@ -84,3 +85,31 @@ pip install -r requirements.txt
 
 python main.py
 ---
+
+```
+## Raspberry Pi Deployment
+
+To run Reviva on Raspberry Pi, execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install python3-opencv
+pip install -r requirements.txt
+python yawn_eye_alert_iot_first_test.py
+```
+
+## IoT Alert System (Telegram)
+Steps to enable Telegram notifications:
+  Open Telegram → Search BotFather
+  Create a bot → Copy the generated BOT_TOKEN
+  Create a Telegram group → Add your bot to the group
+  Get CHAT_ID (use @RawDataBot or any Telegram chat ID extractor)
+  Insert both values inside the Python script:
+  ```bash
+BOT_TOKEN = "your_token_here"
+CHAT_ID = "your_chat_id_here"
+ ```
+When yawning is detected repeatedly, the system will automatically:
+Trigger a buzzer
+Send a real-time alert message to the Telegram group
+Upload the detected image (driver yawning) to Telegram
