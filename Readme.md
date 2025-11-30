@@ -123,10 +123,10 @@ When yawning is detected repeatedly, the system will automatically:
   <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_output.png" width="850">
 </p>
 
-### 🔹 Model Performance Graph
 <p align="center">
   <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_model_result.png" width="850">
 </p>
+
 
 
 ## 👥 Contributors
