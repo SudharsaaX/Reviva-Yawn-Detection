@@ -4,23 +4,6 @@ Reviva is an AI-powered real-time driver monitoring system designed to detect ya
 
 ---
 
-## Table of Contents
-1. Features  
-2. System Overview  
-3. Architecture  
-4. Dataset and Model Training  
-5. Tech Stack  
-6. Installation and Usage  
-7. Raspberry Pi Deployment  
-8. IoT Alert System (Buzzer and Telegram)  
-9. Project Structure  
-10. Results (Screenshots Placeholder)  
-11. Contributors  
-12. Future Enhancements  
-13. License  
-
----
-
 ## Features
 - Real-time yawning detection using YOLOv8  
 - Continuous monitoring through live video stream  
@@ -139,3 +122,20 @@ When yawning is detected repeatedly, the system will automatically:
 </p>
 
 ---
+
+## 👥 Contributors
+
+Thanks to these amazing people for their contribution to the Reviva project:
+
+<p align="center">
+  <a href="https://github.com/SudharsaaX">
+    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
+  </a>
+  <a href="https://github.com/Sriram494">
+    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
+  </a>
+  <a href="https://github.com/Tamil157">
+    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
+  </a>
+</p>
+
