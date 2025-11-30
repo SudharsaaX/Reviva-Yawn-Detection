@@ -124,7 +124,7 @@ When yawning is detected repeatedly, the system will automatically:
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_model_result.png" width="850">
+  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_model_result.png" width="450">
 </p>
 <p align="center"><i>Detected yawning frames using the YOLOv8 model during real-time inference</i></p>
 
