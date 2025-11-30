@@ -4,8 +4,6 @@ Reviva is an AI-powered real-time driver monitoring system designed to detect ya
 
 ---
 > ** Project Status: Phase 1 Completed**
-> ![Phase](https://img.shields.io/badge/Project-Phase%201-blue)
-
 ---
 
 ## Features
