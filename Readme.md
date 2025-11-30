@@ -3,6 +3,10 @@
 Reviva is an AI-powered real-time driver monitoring system designed to detect yawning, a major indicator of fatigue, and trigger safety alerts to prevent road accidents. The system uses a lightweight YOLOv8 deep-learning model for fast inference and deploys efficiently on Raspberry Pi with buzzer and Telegram IoT notifications.
 
 ---
+> ** Project Status: Phase 1 Completed**
+> ![Phase](https://img.shields.io/badge/Project-Phase%201-blue)
+
+---
 
 ## Features
 - Real-time yawning detection using YOLOv8  
