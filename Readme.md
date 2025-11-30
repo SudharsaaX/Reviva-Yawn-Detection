@@ -138,12 +138,4 @@ When yawning is detected repeatedly, the system will automatically:
   <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_output.png" width="850">
 </p>
 
-### 🔹 Telegram Notification Alert
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_tele_notification.jpg" width="850">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/SudharsaaX/Reviva-Yawn-Detection/main/results/reviva_tele_screenshot%20.jpg" width="850">
-</p>
 ---
