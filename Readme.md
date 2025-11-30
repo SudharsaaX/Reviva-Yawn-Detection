@@ -125,17 +125,29 @@ When yawning is detected repeatedly, the system will automatically:
 
 ## 👥 Contributors
 
-Thanks to these amazing people for their contribution to the Reviva project:
-
-<p align="center">
-  <a href="https://github.com/SudharsaaX">
-    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
-  </a>
-  <a href="https://github.com/Sriram494">
-    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
-  </a>
-  <a href="https://github.com/Tamil157">
-    <img src="https://avatars.githubusercontent.com/u?size=100" width="90" style="border-radius:50%">
-  </a>
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/SudharsaaX">
+        <img src="https://avatars.githubusercontent.com/SudharsaaX" width="95px" style="border-radius:50%"/>
+        <br/>
+        <sub><b>Sudharsan S</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Sriram494">
+        <img src="https://avatars.githubusercontent.com/Sriram494" width="95px" style="border-radius:50%"/>
+        <br/>
+        <sub><b>Sriram K</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Tamil157">
+        <img src="https://avatars.githubusercontent.com/Tamil157" width="95px" style="border-radius:50%"/>
+        <br/>
+        <sub><b>Tamilarasan D</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
